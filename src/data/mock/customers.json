@@ -1,0 +1,5 @@
+[
+  { "id": "cus_001", "name": "Olivia Green", "email": "olivia@example.com", "visits": 18, "lifetimeSpend": 1240.5, "status": "VIP" },
+  { "id": "cus_002", "name": "Noah Carter", "email": "noah@example.com", "visits": 6, "lifetimeSpend": 320.75, "status": "Regular" },
+  { "id": "cus_003", "name": "Ava Brooks", "email": "ava@example.com", "visits": 2, "lifetimeSpend": 88.2, "status": "New" }
+]

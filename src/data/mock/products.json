@@ -1,0 +1,7 @@
+[
+  { "id": "prd_001", "name": "Arabica Coffee Beans", "sku": "COF-001", "category": "Beverages", "price": 18.5, "stock": 42, "status": "active" },
+  { "id": "prd_002", "name": "Blueberry Muffin", "sku": "BAK-014", "category": "Bakery", "price": 4.25, "stock": 18, "status": "active" },
+  { "id": "prd_003", "name": "Vitamin C Tablets", "sku": "PHR-210", "category": "Pharmacy", "price": 11.99, "stock": 8, "status": "low" },
+  { "id": "prd_004", "name": "Hair Styling Service", "sku": "SRV-044", "category": "Services", "price": 35, "stock": 999, "status": "active" },
+  { "id": "prd_005", "name": "Organic Milk", "sku": "DRY-330", "category": "Dairy", "price": 5.75, "stock": 5, "status": "low" }
+]
