@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../app/providers.jsx';
 import { Button } from '../../../components/ui/Button.jsx';
 import { Card } from '../../../components/ui/Card.jsx';
@@ -8,15 +8,13 @@ import { Input } from '../../../components/ui/Input.jsx';
 export function LoginPage() {
   const { user, login } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
-  const redirectTo = location.state?.from || '/app/dashboard';
   const { register, handleSubmit, formState: { errors } } = useForm({ defaultValues: { email: 'demo@tradeflow.test', password: 'password' } });
 
   if (user) return <Navigate to="/app/dashboard" replace />;
 
   const onSubmit = (values) => {
     login(values);
-    navigate(redirectTo);
+    navigate('/app/dashboard');
   };
 
   return (

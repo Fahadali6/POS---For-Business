@@ -1,13 +1,12 @@
-import { LogOut, Menu, Moon, Search, Sun } from 'lucide-react';
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { Menu, Moon, Search, Sun } from 'lucide-react';
+import { NavLink, Outlet } from 'react-router-dom';
 import { navigationItems } from '../../config/navigation.js';
 import { useAuth, useTheme } from '../../app/providers.jsx';
 import { Button } from '../ui/Button.jsx';
 import { cn } from '../../lib/cn.js';
 
 export function AppShell() {
-  const { logout, user } = useAuth();
-  const navigate = useNavigate();
+  const { user } = useAuth();
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -38,7 +37,6 @@ export function AppShell() {
           <div className="mt-auto rounded-2xl border border-slate-200 p-4 dark:border-slate-800">
             <p className="text-sm font-semibold">{user?.business}</p>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{user?.name} • {user?.role}</p>
-            <Button variant="ghost" className="mt-3 w-full justify-start" onClick={() => { logout(); navigate('/login'); }}><LogOut className="h-4 w-4" /> Sign out</Button>
           </div>
         </div>
       </aside>

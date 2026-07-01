@@ -12,7 +12,7 @@ const demoUser = {
 export function AppProviders({ children }) {
   const [user, setUser] = useState(() => {
     const storedUser = localStorage.getItem('pos:user');
-    return storedUser ? JSON.parse(storedUser) : null;
+    return storedUser ? JSON.parse(storedUser) : demoUser;
   });
   const [theme, setTheme] = useState(() => localStorage.getItem('pos:theme') || 'light');
 
